@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: "Poppins", sans-serif;
+}
+
+body, main {
+    height: 100vh;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+main section:nth-child(1) img{
+    max-width: 250px;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#signUp {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 75%;
+}
+
+#signUp input {
+    padding:1rem;
+    border-radius: 4px;
+    border: 1px solid #cbd5e1;
+}
+
+#signUp button {
+    padding: .5rem 1rem;
+    border: 1px solid transparent;
+    background-color: #7c3aed;
+    color: white;
+    border-radius: 4px;
+}
