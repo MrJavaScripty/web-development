@@ -1,27 +1,30 @@
 :root {
-    --color-mint: #EFF6EE;
     --color-prussian: #273043;
-    --color-coal: #9197AE;
+    --color-cool-grey: #9197AE;
+    --color-mint: #EFF6EE;
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: var(--color-prussian);
-    color: var(--color-mint);
     font-family: "Poppins", sans-serif;
+    color: var(--color-mint);
 }
 
 h1 {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 1.75rem;
 }
 
 h2 {
     font-size: 1.5rem;
+}
+
+h1, h2 {
     font-weight: bold;
 }

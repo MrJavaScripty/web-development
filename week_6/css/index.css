@@ -1,81 +1,78 @@
 @import "./common.css";
 
 :root {
-    --card-radius: 4px
+    --card-radius: 4px;
+    --max-view-width: 80vw;
 }
 
 header {
     display: flex;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin-block: 2rem;
 }
 
 main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    max-width: 75vw;
+    max-width: var(--max-view-width);
     margin-inline: auto;
-    gap: 1rem;
+    gap: .5rem;
 }
 
 .flower-card {
-    background-color: var(--color-coal);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-cool-grey);
     border-radius: var(--card-radius);
     overflow: hidden;
     align-self: end;
 }
 
-.flower-card .flower-card-image {
-    background-repeat: no-repeat;
-    background-size: cover;
+.flower-card img {
+    object-fit: cover;
     width: 100%;
 }
 
-.flower-card h1 {
-    font-size: 1.125rem;
+.flower-card-info {
+    padding: .5rem 1rem;
 }
 
-.flower-card .flower-card-info {
-    display: flex;
-    flex-direction: column;
-    gap: .25rem;
-    padding: .5rem;
+.flower-card-info h1 {
+    font-size: 1.0125rem;
+}
+
+.flower-card-info p {
+    font-size: 0.875rem;
 }
 
 summary {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 2rem;
-    padding: 1rem;
-    background-color: var(--color-coal);
+    gap: 2rem;
+    background-color: var(--color-cool-grey);
     border-radius: var(--card-radius);
+    padding: .5rem;
 }
 
 summary h1 {
     font-size: 1rem;
 }
 
-summary .flower-card {
+summary .flower-card-info {
     background-color: var(--color-prussian);
 }
 
 .order-controls {
-    display: grid;
+    display:grid;
     grid-template-columns: repeat(3, 1fr);
-    max-width: 75vw;
-    margin-inline: auto;
-    margin-block: 2rem;
-    background-color: var(--color-coal);
+    background-color: var(--color-cool-grey);
+    max-width: var(--max-view-width);
+    margin: 2rem auto;
     padding: 1rem;
     border-radius: var(--card-radius);
 }
 
-.order-controls label{
-    font-size: .875rem;
-}
-
-.container--bouquet-color {
-    display: flex;
-    flex-direction: column;
+#anchor {
+    height: 100vh;
 }

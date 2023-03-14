@@ -9,83 +9,67 @@
 </head>
 <body>
     <header>
-        <h1>Valentines Flowers</h1>
+        <h1><a href="#helloworld">Valentines Flowers</a></h1>
     </header>
     <main>
-        <div id="flower-card-white" class="flower-card">
-            <img class="flower-card-image" src="assets/white.jpeg" alt="White Flowers"/>
+        <div data-name="white" class="flower-card">
+            <img src="assets/white.jpeg" alt="White Flower">
             <div class="flower-card-info">
                 <h1>White Bouquet</h1>
                 <p>&pound;24</p>
             </div>
         </div>
-        <div class="flower-card">
-            <img class="flower-card-image" src="assets/red.jpeg" alt="Red Flowers"/>
+        <div data-name="red" class="flower-card">
+            <img src="assets/red.jpeg" alt="Red Flower">
             <div class="flower-card-info">
                 <h1>Red Bouquet</h1>
-                <p>&pound;25</p>
-            </div>
-        </div>
-        <div class="flower-card">
-            <img class="flower-card-image" src="assets/pink.jpeg" alt="Pink Flowers"/>
-            <div class="flower-card-info">
-                <h1>Pink Bouquet</h1>
                 <p>&pound;20</p>
             </div>
         </div>
-        <summary>
-            <h1>Your Order</h1>
-            <div id="selected-flower">
-                <!-- Selected flower goes here -->
+        <div data-name="pink" class="flower-card">
+            <img src="assets/pink.jpeg" alt="Pink Flower">
+            <div class="flower-card-info">
+                <h1>Pink Bouquet</h1>
+                <p>&pound;25</p>
             </div>
-            <!-- <div class="flower-card">
-                <img class="flower-card-image" src="assets/white.jpeg" alt="White Flowers"/>
-                <div class="flower-card-info">
-                    <h1>White Bouquet</h1>
-                    <p>&pound;24</p>
-                </div>
-            </div> -->
-        </summary>
+        </div>
+        <summary>
+            <h1>Your Order:</h1>
+            <div id="selected-option"></div>
+        </summary>  
     </main>
-    <form class="order-controls">
+    <form id="flower-form" class="order-controls">
         <div>
-            <label for="bouquet-options-selector">
-                Bouquet Options:
-            </label>
-            <select name="bouquetOption" id="bouquet-options-selector">
+            <label for="bouquet-options-select">Bouquet Options:</label>
+            <select name="bouquet-options-select" id="bouquet-options-select">
                 <option value="withChampagne">With Champagne</option>
                 <option value="extra">Extra</option>
-                <option value="extraWithChampagne”">Extra With Champagne”</option>
+                <option value="extraWithChampagne">Extra with Champagne</option>
             </select>
         </div>
-        <div class="container--bouquet-color">
-            <label for="bouquet-options-selector">
-                Bouquet Color:
-            </label>
+        <div>
+            <label>Bouquet Color:</label>
             <div>
-                <input id="b-color-red" type="radio" name="bouquetColor" value="Red">
-                <label for="bouquet-options-selector">
-                    Red
-                </label>
+                <input type="radio" name="bouquet-color" id="bouquet-color-white" value="white">
+                <label for="bouquet-color-white">White</label>
             </div>
             <div>
-                <input id="b-color-white" type="radio" name="bouquetColor" value="White">
-                <label for="bouquet-options-selector">
-                    White
-                </label>
+                <input type="radio" name="bouquet-color" id="bouquet-color-red" value="red">
+                <label for="bouquet-color-red">Red</label>
             </div>
             <div>
-                <input id="b-color-pink" type="radio" name="bouquetColor" value="Pink">
-                <label for="bouquet-options-selector">
-                    Pink
-                </label>
+                <input type="radio" name="bouquet-color" id="bouquet-color-pink" value="pink">
+                <label for="bouquet-color-pink">Pink</label>
             </div>
         </div>
         <div>
-            <button type="reset">Clear your Order</button>
-            <button id="submit-btn" type="submit">Confirm Order</button>
+            <button type="reset">Clear Cart</button>
+            <button type="submit">Confirm Order</button>
         </div>
     </form>
+    <div id="anchor">
+        <h1 id="helloworld">HELLO</h1>
+    </div>
 </body>
-<script src="js/index.js"></script>
+<script type="module" src="js/index.js"></script>
 </html>

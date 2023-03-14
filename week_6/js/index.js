@@ -1,11 +1,20 @@
-const flowerEl = document.getElementById('flower-card-white')
+const flowerForm = document.getElementById("flower-form");
 
-const submitBtn = document.getElementById('submit-btn')
+flowerForm.addEventListener("submit", (e)=>{
+    e.preventDefault();
 
-submitBtn.addEventListener("click", (e) => {
-    e.preventDefault()
-    const cloneFlowerEl = flowerEl.cloneNode(true)
+    const formData = new FormData(e.target);
+
+    const selectedOptionSlot = document.getElementById("selected-option");
+    const selectedColor = formData.get("bouquet-color")
+
+    const selectedOptionCard = document.querySelector(`[data-name="${selectedColor}"]`)
+    const clonedSelectedOptionCard = selectedOptionCard.cloneNode(true)
     
-    const summaryPlaceholder = document.getElementById('selected-flower')
-    summaryPlaceholder.appendChild(cloneFlowerEl)
+
+    if(selectedOptionSlot.hasChildNodes()){
+        selectedOptionSlot.removeChild(selectedOptionSlot.firstChild);
+    }
+
+    selectedOptionSlot.appendChild(clonedSelectedOptionCard)
 })
