@@ -1,0 +1,13 @@
+:root {
+    --color-red-main: #f10;
+    --color-red-light: #f100ab;
+    --background-main: #fff;
+    --background-backdrop: rgba(0,0,0,0.4);
+    --font-poppins: "Poppins", sans-serif;
+    --color-coral: #FF645B;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--color-coral);
+}

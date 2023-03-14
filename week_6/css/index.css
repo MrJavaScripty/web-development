@@ -1,0 +1,81 @@
+@import "./common.css";
+
+:root {
+    --card-radius: 4px
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 75vw;
+    margin-inline: auto;
+    gap: 1rem;
+}
+
+.flower-card {
+    background-color: var(--color-coal);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    align-self: end;
+}
+
+.flower-card .flower-card-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.flower-card h1 {
+    font-size: 1.125rem;
+}
+
+.flower-card .flower-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    padding: .5rem;
+}
+
+summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+    padding: 1rem;
+    background-color: var(--color-coal);
+    border-radius: var(--card-radius);
+}
+
+summary h1 {
+    font-size: 1rem;
+}
+
+summary .flower-card {
+    background-color: var(--color-prussian);
+}
+
+.order-controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 75vw;
+    margin-inline: auto;
+    margin-block: 2rem;
+    background-color: var(--color-coal);
+    padding: 1rem;
+    border-radius: var(--card-radius);
+}
+
+.order-controls label{
+    font-size: .875rem;
+}
+
+.container--bouquet-color {
+    display: flex;
+    flex-direction: column;
+}
