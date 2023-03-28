@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+ </head>
+ <body>
+  <form id="email_form">
+   <input type="text" name="subject" placeholder="Subject" />
+   <textarea name="text" placeholder="Message"></textarea>
+   <input type="hidden" name="access_token" value="hni1wyw0neg18xp799su493f" />
+
+   <input type="hidden" name="success_url" value="." />
+   <input type="hidden" name="error_url" value=".?err=1" />
+
+   <input id="submit_form" type="submit" value="Send" />
+  </form>
+  <dialog id="success_dialog"></dialog>
+  <div id="data-list"></div>
+ </body>
+ <script src="./index.js"></script>
+</html>
